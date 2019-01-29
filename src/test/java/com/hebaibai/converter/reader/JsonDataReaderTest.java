@@ -1,14 +1,13 @@
-package com.github.hjx601496320.converter.reader;
+package com.hebaibai.converter.reader;
 
-import com.github.hjx601496320.converter.FreeMarkerFtl;
+import com.hebaibai.converter.FreeMarkerFtl;
 import org.junit.Test;
 
 import java.io.InputStream;
-import java.util.Map;
 import java.util.Scanner;
 
 @SuppressWarnings("ALL")
-public class XmlDataReaderTest {
+public class JsonDataReaderTest {
 
     static String getData(String name) {
         StringBuilder sb = new StringBuilder();
@@ -21,10 +20,10 @@ public class XmlDataReaderTest {
     }
 
     @Test
-    public void readXml2Xml() throws Exception {
-        DataReader dataReader = new XmlDataReader();
+    public void readJson2Xml() throws Exception {
+        DataReader dataReader = new JsonDataReader();
         //读取数据
-        dataReader.read(getData("test.xml"));
+        dataReader.read(getData("test.json"));
         //设置模板
         FreeMarkerFtl freeMarkerFtl = new FreeMarkerFtl();
         freeMarkerFtl.setTemplateName("xml.ftl");
@@ -35,10 +34,10 @@ public class XmlDataReaderTest {
     }
 
     @Test
-    public void readXml2Json() throws Exception {
-        DataReader dataReader = new XmlDataReader();
+    public void readJson2Json() throws Exception {
+        DataReader dataReader = new JsonDataReader();
         //读取数据
-        dataReader.read(getData("test.xml"));
+        dataReader.read(getData("test.json"));
         //设置模板
         FreeMarkerFtl freeMarkerFtl = new FreeMarkerFtl();
         freeMarkerFtl.setTemplateName("json.ftl");

@@ -1,10 +1,9 @@
-package com.github.hjx601496320.converter.reader;
+package com.hebaibai.converter.reader;
 
 import com.alibaba.fastjson.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * json格式的报文解析
